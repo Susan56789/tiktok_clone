@@ -5,7 +5,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 import user from './user'
 import post from './post'
-import comment from './comment'
+import comments from './comments'
 import postedBy from './postedBy'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -18,7 +18,7 @@ export default createSchema({
     /* Your types here! */
     user,
     post,
-    comment,
+    comments,
     postedBy
   ]),
 })
