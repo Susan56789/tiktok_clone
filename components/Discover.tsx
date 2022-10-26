@@ -16,6 +16,7 @@ const Discover = () => {
 
     const topicStyles = `xl:border-2
      hover:bg-primary hover:text-black
+     text-gray-200
      xl:border-gray-300 px-3 py-2 rounded
       xl:rounded-full flex items-center gap-2
       cursor-pointer justfy-center`
@@ -30,10 +31,10 @@ const Discover = () => {
                 {topics.map((item) => (
                     <Link href={`/?topic=${item.name}`} key={item.name}>
                         <div className={topic === item.name ? activeTopicStyles : topicStyles}>
-                            <span className='text-sm font-bold xl:text-md text-gray-200 '>
+                            <span className='text-sm font-bold xl:text-md  '>
                                 {item.icon}
                             </span>
-                            <span className='text-sm font-medium xl:text-md ml-1 hidden xl:block text-gray-200 capitalize'>
+                            <span className='text-sm font-medium xl:text-md ml-1 hidden xl:block capitalize'>
                                 {item.name}
                             </span>
                         </div>
