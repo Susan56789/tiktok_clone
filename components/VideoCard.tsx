@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { HiVolumeOff, HiVolumeUp } from 'react-icons/hi'
 import { BsPlay, BsFillPlayFill, BsFillPauseFill } from 'react-icons/bs'
 import { GoVerified } from 'react-icons/go'
+import { samplePost } from '../utils/constants'
 
 interface Iprops {
     post: Video
@@ -24,7 +25,7 @@ const VideoCard: NextPage<Iprops> = ({ post }) => {
                                 <Image
                                     width={62}
                                     height={62}
-                                    src={post.postedBy.image}
+                                    src={post.postedBy ? post.postedBy.image : samplePost.postedBy.image}
                                     alt='profile'
                                     className='rounded-full'
                                     layout='responsive'
