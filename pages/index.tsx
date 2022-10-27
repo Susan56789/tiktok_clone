@@ -37,7 +37,7 @@ const Home = ({ videos }: IProps) => {
 //and pass data to your page as props.
 export const getServerSideProps = async () => {
 
-  const { data } = await axios.get('http://localhost:3000/api/post ' || 'https://tiktok-clone-sage.vercel.app/api/post')
+  const { data } = await axios.get('https://tiktok-clone-sage.vercel.app/api/post')
 
 
   return {
