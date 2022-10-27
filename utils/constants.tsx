@@ -41,12 +41,23 @@ export const topics = [
 
 export const samplePost = {
   _id: '60f1c7b0b0b5a8a0b4b0b0b0',
-  videoUrl: '/media/ReactvsAngular.mp4',
-  description: 'Coding video',
-  song: 'Video',
-  likes: 0,
-  comments: 0,
-  shares: 0,
+
+  caption: 'Coding video',
+  video: {
+    _id: '60f1c7b0b0b5a8a0b4b0b0b0',
+    videoUrl: '/media/ReactvsAngular.mp4',
+  },
+  likes: 100,
+  comments: {
+    _key: '60f1c7b0b0b5a8a0b4b0b0b0',
+    comment: 'Nice video',
+    postedBy: {
+      _id: '60f1c7b0b0b5a8a0b4b0b0b0',
+      userName: 'John',
+      image: '/media/John.png',
+    },
+  },
+  userId: '60f1c7b0b0b5a8a0b4b0b0b0',
   postedBy: {
     _id: '60f1c7b0b0b5a8a0b4b0b0b0',
     name: 'Susan Wairimu',
