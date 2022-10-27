@@ -14,7 +14,7 @@ const Home = ({ videos }: IProps) => {
   // console.log(videos)
   return (
     <div>
-    
+
       <Head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,7 +36,8 @@ const Home = ({ videos }: IProps) => {
 //getServerSideProps is a Next.js function that allows you to do server-side rendering 
 //and pass data to your page as props.
 export const getServerSideProps = async () => {
-  const { data } = await axios.get('http://localhost:3000/api/post')
+
+  const { data } = await axios.get('http://localhost:3000/api/post ' || 'https://tiktok-clone-sage.vercel.app/api/post')
 
 
   return {
