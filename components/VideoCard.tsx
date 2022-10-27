@@ -34,6 +34,13 @@ const VideoCard: NextPage<Iprops> = ({ post }) => {
                         </Link>
                     </div>
                 </div>
+                <Link href='/'>
+                    <div>
+                        <p className='text-sm font-semibold text-gray-700'>
+                            {post.postedBy ? post.postedBy.userName : samplePost.postedBy.username}
+                        </p>
+                    </div>
+                </Link>
             </div>
         </div>
     )
