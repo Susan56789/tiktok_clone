@@ -7,9 +7,11 @@ import { AiOutlineLogout } from 'react-icons/ai'
 import { BiSearch } from 'react-icons/bi'
 import { IoMdAdd } from 'react-icons/io'
 import logo from '../utils/tiktok-logo.png'
+import { createOrGetUser } from '../utils'
 
 const Navbar = () => {
     const user = false;
+
     return (
         <div className='w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4'>
             <Link href='/'>
@@ -18,7 +20,7 @@ const Navbar = () => {
                         className='cursor-pointer'
                         src={logo}
                         alt='TikTok Logo'
-                        layout='responsive'
+                        priority={true}
                     />
                 </div>
             </Link>
@@ -30,7 +32,7 @@ const Navbar = () => {
             ) : (
                 <div className='flex items-center gap-4'>
                     <GoogleLogin
-                        onSuccess={(response) => console.log(response)}
+                        onSuccess={(response) => createOrGetUser(response)}
                         onError={() => console.log('error')}
                     />
                 </div>

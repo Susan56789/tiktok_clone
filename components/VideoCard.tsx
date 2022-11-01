@@ -38,12 +38,12 @@ const VideoCard: NextPage<Iprops> = ({ post }) => {
                         <Link href='/'>
                             <>
                                 <Image
-                                    width={62}
-                                    height={62}
+                                    width={50}
+                                    height={50}
                                     src={post.postedBy ? post.postedBy.image : samplePost.postedBy.image}
                                     alt='profile'
-                                    className='rounded-full'
-                                    layout='responsive'
+                                    className='rounded-full w-auto h-auto mb-2 '
+                                    priority={true}
                                 />
                             </>
                         </Link>
